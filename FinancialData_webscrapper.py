@@ -5,6 +5,10 @@ Created on Fri Jun 17 11:26:17 2022
 @author: Nicol
 """
 
+# This program is used for downloading stock price data and its currently set
+# up for weekly price values. 
+
+
 import pandas as pd
 import yfinance as yf
 import datetime
@@ -50,6 +54,10 @@ data = stock_final.pivot_table(values="Adj Close",
                              index="Date",
                              columns=["Name"])
 
+# The last two lines are used for transforming the data into percentage change
+# and remove the NA values. 
+df = data.pct_change()
+df = df.dropna()
 
 
 
