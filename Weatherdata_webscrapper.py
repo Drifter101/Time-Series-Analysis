@@ -36,9 +36,7 @@ stations = stations.fetch(5)
 print(stations)
 
 #Use the station code for downloading the data
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
+
 df = Monthly("07149", start,end)
 df = df.normalize()
 df = df.aggregate("1Y")
@@ -46,27 +44,11 @@ df = df.fetch()
 
 # Plot line chart including average, minimum and maximum temperature
 df.plot(y=['tavg', 'tmin', 'tmax'])
-=======
->>>>>>> Stashed changes
-pt = Monthly("07149", start,end)
-pt = pt.normalize()
-pt = pt.aggregate("1Y")
-pt = pt.fetch()
-
-# Plot line chart including average, minimum and maximum temperature
-pt.plot(y=['tavg', 'tmin', 'tmax'])
-<<<<<<< Updated upstream
-=======
->>>>>>> main
->>>>>>> Stashed changes
 plt.show()
 
 
 # Other useful commands
 #Setting a month column and removing empty columns
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
 df2 = df
 df2 = df2.drop(df2.columns[[4, 5, 6]], axis= 1)
 df2 = df2.dropna()
@@ -75,20 +57,7 @@ df2.iloc[[0,-1]]
 
 #Check for missing values
 df2[['prcp', 'tavg', 'tmax', 'tmin']].isna().sum()
-=======
->>>>>>> Stashed changes
-pt2 = pt
-pt2 = pt2.drop(pt2.columns[[4, 5, 6]], axis= 1)
-pt2 = pt2.dropna()
-pt2['month'] = pd.DatetimeIndex(pt2.index).month
-pt2.iloc[[0,-1]]
 
-#Check for missing values
-pt2[['prcp', 'tavg', 'tmax', 'tmin']].isna().sum()
-<<<<<<< Updated upstream
-=======
->>>>>>> main
->>>>>>> Stashed changes
 
 
 
