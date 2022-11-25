@@ -15,8 +15,9 @@ from functools import reduce
 import numpy as np
 
 
-chillan = "85672"
-curico = "85629"
+chillan = "85672" #ID of weather station for the region of Chillan, Chile. 
+curico = "85629"  #ID of weather station for the region of Curico, Chile.
+#Please use Weatherdata_webscrapper.py for finding the ID of your desire weather station.
 
 
 start = datetime(2000, 1, 1)
