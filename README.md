@@ -1,8 +1,6 @@
 # Time-Series-Analysis
 Series of different tools used for webscrapping and data analysis.  
 
-Start by using the web_scrapper tool for downloading the data
-Proceed with the analysis tool
 
 Financial series analysis.py: Used for technical analysis of financial time series. 
 
